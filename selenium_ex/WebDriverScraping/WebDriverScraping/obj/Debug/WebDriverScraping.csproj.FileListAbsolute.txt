@@ -1,0 +1,14 @@
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\bin\Debug\WebDriverScraping.exe.config
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\bin\Debug\WebDriverScraping.exe
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\bin\Debug\WebDriverScraping.pdb
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\bin\Debug\WebDriver.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\bin\Debug\WebDriver.Support.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\bin\Debug\WebDriver.xml
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\bin\Debug\WebDriver.Support.xml
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\obj\Debug\WebDriverScraping.csprojAssemblyReference.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\obj\Debug\WebDriverScraping.csproj.CoreCompileInputs.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\obj\Debug\WebDriverScraping.csproj.CopyComplete
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\obj\Debug\WebDriverScraping.exe
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\obj\Debug\WebDriverScraping.pdb
