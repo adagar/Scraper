@@ -5,6 +5,7 @@ using System.Text;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using System.Collections.Generic;
 
 namespace WebDriverScraping
 {
@@ -49,6 +50,8 @@ namespace WebDriverScraping
                     //go to stock page
                     Console.WriteLine("Go to stocks page...");
                     GoToPortfolio(driver);
+
+                    PrintPortfolio(driver);
                     
                 }
                 catch(NoSuchElementException)
@@ -100,6 +103,17 @@ namespace WebDriverScraping
             clearPop.Click();
 
             InfoDump(driver);
+        }
+        public static void PrintPortfolio(ChromeDriver driver)
+        {
+            var stockTable = driver.FindElementByXPath("//*[@id='main']/section/section[2]/div[2]/table/tbody");
+            ICollection<IWebElement> trCollection = stockTable.FindElements(By.TagName("tr"));
+            foreach(var stockSymbol in trCollection)
+            {
+                Console.WriteLine(stockSymbol.Text);
+            }
+            
+
         }
     }
 }
