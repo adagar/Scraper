@@ -33,30 +33,73 @@ namespace WebDriverScraping
                 */
                 const string username = @"angarza@intracitygeeks.org";
                 const string password = @"dogFarts123!";
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
                 try
                 {
                     driver.Navigate().GoToUrl("https://login.yahoo.com/config/login?.intl=us&.lang=en-US&.src=finance&.done=https%3A%2F%2Ffinance.yahoo.com%2F");
-                    var userNameField = driver.FindElementById("login-username");
-                    var loginButton = driver.FindElementById("login-signin");
+                    
+                    AddUsername(driver, username);
 
-                    userNameField.SendKeys(username);
-                    loginButton.Click();
+                    wait.Until(ExpectedConditions.ElementIsVisible(By.Id("login-passwd")));
 
-                    var passwordField = driver.FindElementByName("passwd");
-                    loginButton.Click();
+                    AddPassword(driver, password);
 
-                    driver.GetScreenshot().SaveAsFile(@"screen.png", OpenQA.Selenium.ScreenshotImageFormat.Png);
+                    Console.WriteLine("Logged in!");
+
+                    //go to stock page
+                    Console.WriteLine("Go to stocks page...");
+                    GoToPortfolio(driver);
+                    
                 }
                 catch(NoSuchElementException)
                 {
-                    var result = driver.PageSource;
-                    File.WriteAllText("result.txt", result);
+                    InfoDump(driver);
                     Console.WriteLine("No element found...");
-                    driver.GetScreenshot().SaveAsFile(@"screen.png", OpenQA.Selenium.ScreenshotImageFormat.Png);
                 }
+                catch(StaleElementReferenceException)
+                {
+                    Console.WriteLine("Stale element");
+                    AddPassword(driver, password);
+                    InfoDump(driver);                    
+                }           
+            }      
+        }
+        public static void InfoDump(ChromeDriver driver)
+        {
+            var result = driver.PageSource;
+            File.WriteAllText("result.html", result);
 
+            driver.GetScreenshot().SaveAsFile(@"screen.png", OpenQA.Selenium.ScreenshotImageFormat.Png);
+        }
+        public static void AddUsername(ChromeDriver driver, string username)
+        {
+            var userNameField = driver.FindElementById("login-username");
+            var loginButton = driver.FindElementById("login-signin");
 
-            }
+            userNameField.SendKeys(username + Keys.Enter);
+        }
+        public static void AddPassword(ChromeDriver driver, string password)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            Console.WriteLine("Inputting password...");
+            var loginButton = driver.FindElementById("login-signin");
+            var passwordField = driver.FindElementById("login-passwd");
+            passwordField.SendKeys(password + Keys.Enter);
+            Console.WriteLine("Password entered...");
+            //driver.Keyboard.SendKeys(Keys.Enter);
+            Console.WriteLine("Password submitted...");
+        }
+        public static void GoToPortfolio(ChromeDriver driver)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+
+            driver.Navigate().GoToUrl("https://finance.yahoo.com/portfolio/p_0/view/v1");
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id='fin-tradeit']/div[2]/div/div/div[2]/button[1]")));
+            Console.WriteLine("Portfolio page loaded!");
+            var clearPop = driver.FindElementByXPath("//*[@id='fin-tradeit']/div[2]/div/div/div[2]/button[2]");
+            clearPop.Click();
+
+            InfoDump(driver);
         }
     }
 }
