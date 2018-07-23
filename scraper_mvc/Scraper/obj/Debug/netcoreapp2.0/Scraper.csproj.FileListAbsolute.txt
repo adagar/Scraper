@@ -1,0 +1,13 @@
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\bin\Debug\netcoreapp2.0\app.db
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\bin\Debug\netcoreapp2.0\Scraper.deps.json
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\bin\Debug\netcoreapp2.0\Scraper.runtimeconfig.json
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\bin\Debug\netcoreapp2.0\Scraper.runtimeconfig.dev.json
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\bin\Debug\netcoreapp2.0\Scraper.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\bin\Debug\netcoreapp2.0\Scraper.pdb
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\netcoreapp2.0\Scraper.csprojAssemblyReference.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\netcoreapp2.0\Scraper.csproj.CoreCompileInputs.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\netcoreapp2.0\Scraper.AssemblyInfoInputs.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\netcoreapp2.0\Scraper.AssemblyInfo.cs
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\netcoreapp2.0\Scraper.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\netcoreapp2.0\Scraper.pdb
