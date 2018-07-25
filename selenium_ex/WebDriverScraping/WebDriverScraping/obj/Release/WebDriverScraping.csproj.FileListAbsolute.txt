@@ -1,0 +1,4 @@
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\obj\Release\WebDriverScraping.csprojAssemblyReference.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\obj\Release\WebDriverScraping.csproj.CoreCompileInputs.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\obj\Release\WebDriverScraping.exe
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\selenium_ex\WebDriverScraping\WebDriverScraping\obj\Release\WebDriverScraping.pdb

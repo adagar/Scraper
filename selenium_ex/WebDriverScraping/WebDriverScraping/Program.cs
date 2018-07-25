@@ -14,7 +14,11 @@ namespace WebDriverScraping
         static void Main(string[] args)
         {
             Console.WriteLine("UNLEASH THE SCRAPER!");
-            using (var driver = new ChromeDriver())
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("headless");
+            options.AddArguments("window-size=1200x600");
+
+            using (var driver = new ChromeDriver(options))
             {
                 Console.WriteLine("Driver found!");
                 /*
@@ -111,8 +115,7 @@ namespace WebDriverScraping
             foreach(var stockSymbol in trCollection)
             {
                 Console.WriteLine(stockSymbol.Text);
-            }
-            
+            }        
 
         }
     }

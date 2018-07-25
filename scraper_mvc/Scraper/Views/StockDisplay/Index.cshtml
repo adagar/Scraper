@@ -1,0 +1,32 @@
+﻿@model  StockViewModel
+
+@{ 
+    ViewData["Title"] = "Track Your Porfolio!";
+}
+
+<div class="panel panel-default stock-panel">
+    <div class="panel-heading"">@ViewData["Title"]</div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Symbol</td>
+                <td>Last Price</td>
+                <td>$ Change</td>
+                <td>% Change</td>
+                <td>Volume</td>
+                <td>Market Snapshot</td>
+            </tr>
+        </thead>
+        @foreach(var stock in Model.Stocks)
+        {
+        <tr>
+            <td>@stock.symbol</td>
+            <td>@stock.lastPrice</td>
+            <td>@stock.change</td>
+            <td>@stock.percentChange</td>
+            <td>@stock.volume</td>
+            <td>@stock.snapshotTime</td>
+        </tr>
+        }
+    </table>
+</div>

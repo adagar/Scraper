@@ -36,6 +36,7 @@ namespace Scraper
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
+            services.AddSingleton<IStockItemService, FakePortfolioSnapshotService>();
             services.AddMvc();
         }
 
