@@ -1,0 +1,10 @@
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\lambda-example\LambdaTestV2\LambdaTestV2\bin\Release\netcoreapp2.1\linux-x64\LambdaTestV2.deps.json
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\lambda-example\LambdaTestV2\LambdaTestV2\bin\Release\netcoreapp2.1\linux-x64\LambdaTestV2.runtimeconfig.json
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\lambda-example\LambdaTestV2\LambdaTestV2\bin\Release\netcoreapp2.1\linux-x64\LambdaTestV2.runtimeconfig.dev.json
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\lambda-example\LambdaTestV2\LambdaTestV2\bin\Release\netcoreapp2.1\linux-x64\LambdaTestV2.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\lambda-example\LambdaTestV2\LambdaTestV2\bin\Release\netcoreapp2.1\linux-x64\LambdaTestV2.pdb
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\lambda-example\LambdaTestV2\LambdaTestV2\obj\Release\netcoreapp2.1\linux-x64\LambdaTestV2.csproj.CoreCompileInputs.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\lambda-example\LambdaTestV2\LambdaTestV2\obj\Release\netcoreapp2.1\linux-x64\LambdaTestV2.AssemblyInfoInputs.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\lambda-example\LambdaTestV2\LambdaTestV2\obj\Release\netcoreapp2.1\linux-x64\LambdaTestV2.AssemblyInfo.cs
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\lambda-example\LambdaTestV2\LambdaTestV2\obj\Release\netcoreapp2.1\linux-x64\LambdaTestV2.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\lambda-example\LambdaTestV2\LambdaTestV2\obj\Release\netcoreapp2.1\linux-x64\LambdaTestV2.pdb
