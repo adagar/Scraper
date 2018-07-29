@@ -28,7 +28,7 @@ namespace Scraper.Services
                 percentChange = 2.96,
                 volume = 230,
                 snapshotTime = DateTime.Now
-    };
+            };
 
             return Task.FromResult(new[] { stock1, stock2 });
         }

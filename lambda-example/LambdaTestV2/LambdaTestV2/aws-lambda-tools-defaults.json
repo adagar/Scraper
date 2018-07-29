@@ -6,7 +6,7 @@
         "dotnet lambda help",
         "All the command line options for the Lambda command can be specified in this file."
     ],
-    "profile"     : "default",
+    "profile"     : "admin-adagar",
     "region"      : "us-east-1",
     "configuration" : "Release",
     "framework"     : "netcoreapp2.1",
@@ -14,8 +14,8 @@
     "function-memory-size" : 256,
     "function-timeout"     : 30,
     "function-handler"     : "LambdaTestV2::LambdaTestV2.Function::FunctionHandler",
-    "function-name"        : "LambdaExampleV1",
-    "function-role"        : "arn:aws:iam::710402677755:role/service-role/admin-adagar-lambda",
+    "function-name"        : "LambdaExampleV2",
+    "function-role"        : "arn:aws:iam::710402677755:role/lambda_exec_LambdaExampleV2",
     "tracing-mode"         : "PassThrough",
     "environment-variables" : ""
 }

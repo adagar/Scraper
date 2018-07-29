@@ -7,22 +7,24 @@
 
   <ItemGroup>
     <Compile Remove="Views\NewFolder1\**" />
-    <Compile Remove="Views\NewFolder\**" />
     <Content Remove="Views\NewFolder1\**" />
-    <Content Remove="Views\NewFolder\**" />
     <EmbeddedResource Remove="Views\NewFolder1\**" />
-    <EmbeddedResource Remove="Views\NewFolder\**" />
     <None Remove="Views\NewFolder1\**" />
-    <None Remove="Views\NewFolder\**" />
   </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" PrivateAssets="All" />
+    <PackageReference Include="Selenium.Chrome.WebDriver" Version="2.40.0" />
+    <PackageReference Include="Selenium.Support" Version="3.13.1" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.13.1" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="2.41.0" />
+    <PackageReference Include="Selenium.WebDriverBackedSelenium" Version="3.13.1" />
   </ItemGroup>
 
   <ItemGroup>
