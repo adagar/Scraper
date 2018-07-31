@@ -13,13 +13,20 @@ namespace Scraper.Controllers
 {
     public class ScrapeController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            RunScraper();
-            return View();
+            var stocks = await RunScraper();
+
+            var model = new StockViewModel()
+            {
+                Stocks = stocks
+            };
+
+
+            return View(model);
         }
 
-        public void RunScraper()
+        public Task<StockItem[]> RunScraper()
         {
             Debug.WriteLine("UNLEASH THE SCRAPER!");
             ChromeOptions options = new ChromeOptions();
@@ -65,20 +72,24 @@ namespace Scraper.Controllers
                         GoToPortfolio(driver);
 
                         List<string> rawStocks = PrintPortfolio(driver);
+                        Debug.WriteLine(rawStocks);
                         StockItem[] stockItems = ProcessStocks(rawStocks);
+
+                        return Task.FromResult(stockItems);
                         
                     }
                     catch(NoSuchElementException)
                     {
                         InfoDump(driver);
-                        Debug.WriteLine("No element found...");
+                        //Debug.WriteLine("No element found...");
+                        return Task.FromException<StockItem[]>(new NoSuchElementException("No element found"));
                     }
                     catch(StaleElementReferenceException)
                     {
                         Debug.WriteLine("Stale element");
                         AddPassword(driver, password);
-                         InfoDump(driver);                    
-                    }           
+                        return Task.FromException<StockItem[]>(new StaleElementReferenceException("No element found"));
+                }           
                 }      
             }
         public static void InfoDump(ChromeDriver driver)
@@ -124,7 +135,7 @@ namespace Scraper.Controllers
             ICollection<IWebElement> trCollection = stockTable.FindElements(By.TagName("tr"));
             foreach (var stockSymbol in trCollection)
             {
-                //Debug.WriteLine(stockSymbol.Text);
+                Debug.WriteLine(stockSymbol.Text);
                 rawStocks.Add(stockSymbol.Text);
             }
 
@@ -133,21 +144,31 @@ namespace Scraper.Controllers
 
         public static StockItem[] ProcessStocks(List<string> rawStocks)
         {
+            Debug.WriteLine(rawStocks);
             StockItem[] processedStocks = new StockItem[rawStocks.Count];
-            for(var i = 0; i < rawStocks.Count; i++)
-            {
-                string[] rawStockInfo = rawStocks[i].Split(" ");
+            var stockCounter = 0;
+            //for(var i = 0; i < rawStocks.Count; i++)
+            foreach(var rawStock in rawStocks)
+            {                
+                string[] rawStockInfo = rawStock.Replace(",","").Replace("+","").Split(' ');
+                Debug.WriteLine(
+                    "Symbol:" + rawStockInfo[0] + 
+                    " lastPrice:" + rawStockInfo[1] +
+                    " change:" + rawStockInfo[2] +
+                    " percentChange:" + rawStockInfo[3] +
+                    " volume:" + rawStockInfo[8]);
                 StockItem tempStock = new StockItem
                 {
                     Id = Guid.NewGuid(),
-                    symbol = rawStocks[0],
-                    lastPrice = Convert.ToDouble(rawStocks[1]),
-                    change = Convert.ToDouble(rawStocks[2]),
-                    percentChange = Convert.ToDouble(rawStocks[3]),
-                    volume = Convert.ToDouble(rawStocks[4]),
+                    symbol = rawStockInfo[0],
+                    lastPrice = Convert.ToDouble(rawStockInfo[1]),
+                    change = Convert.ToDouble(rawStockInfo[2]),
+                    percentChange = Convert.ToDouble(rawStockInfo[3].Replace(oldValue: "%", newValue: "")),
+                    volume = Convert.ToDouble(rawStockInfo[8].Replace(".","").Replace("k", "000").Replace("M","000000").Replace("B","000000000")),
                     snapshotTime = DateTime.Now
                 };
-                processedStocks[i] = tempStock;
+                processedStocks[stockCounter] = tempStock;
+                stockCounter++;
             }
 
             return processedStocks;
