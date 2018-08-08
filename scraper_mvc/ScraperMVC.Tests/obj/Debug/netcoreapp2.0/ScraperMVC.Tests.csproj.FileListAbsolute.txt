@@ -1,0 +1,16 @@
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\app.db
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\ScraperMVC.Tests.deps.json
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\ScraperMVC.Tests.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\Scraper.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\Scraper.pdb
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\obj\Debug\netcoreapp2.0\ScraperMVC.Tests.csprojAssemblyReference.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\obj\Debug\netcoreapp2.0\ScraperMVC.Tests.csproj.CoreCompileInputs.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\obj\Debug\netcoreapp2.0\ScraperMVC.Tests.AssemblyInfoInputs.cache
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\obj\Debug\netcoreapp2.0\ScraperMVC.Tests.AssemblyInfo.cs
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\obj\Debug\netcoreapp2.0\ScraperMVC.Tests.csproj.CopyComplete
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\ScraperMVC.Tests.runtimeconfig.json
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\ScraperMVC.Tests.runtimeconfig.dev.json
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\NUnit3.TestAdapter.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\NUnit3.TestAdapter.pdb
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\nunit.engine.netstandard.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\Mono.Cecil.dll
