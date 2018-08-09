@@ -14,3 +14,6 @@ C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bi
 C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\NUnit3.TestAdapter.pdb
 C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\nunit.engine.netstandard.dll
 C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\Mono.Cecil.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\bin\Debug\netcoreapp2.0\ScraperMVC.Tests.pdb
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\obj\Debug\netcoreapp2.0\ScraperMVC.Tests.dll
+C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\ScraperMVC.Tests\obj\Debug\netcoreapp2.0\ScraperMVC.Tests.pdb
