@@ -2,3 +2,6 @@
 *.lock
 code_project_p1/SampleClient/SampleScraperClient/.vs/SampleScraperClient/v14/.suo
 code_project_p1/SampleClient/SampleScraperClient/.vs/SampleScraperClient/DesignTimeBuild/.dtbcache
+scraper_mvc/Scraper/.vs/Scraper/DesignTimeBuild/.dtbcache
+scraper_mvc/Scraper/.vs/Scraper/v15/.suo
+scraper_mvc/Scraper/.vs/Scraper/v15/Server/sqlite3/storage.ide-wal
