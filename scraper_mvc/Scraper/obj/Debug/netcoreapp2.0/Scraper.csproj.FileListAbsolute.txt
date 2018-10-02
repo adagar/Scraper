@@ -10,4 +10,3 @@ C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\n
 C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\netcoreapp2.0\Scraper.dll
 C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\netcoreapp2.0\Scraper.pdb
 C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\netcoreapp2.0\Scraper.csprojAssemblyReference.cache
-C:\Users\A Nick Garza\Desktop\CareerDevs\Scraper\scraper_mvc\Scraper\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
