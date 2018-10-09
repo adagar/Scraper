@@ -15,6 +15,8 @@ namespace Scraper.Data
         {
         }
 
+        public DbSet<StockItem> Stocks {get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

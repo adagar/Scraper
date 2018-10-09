@@ -9,18 +9,27 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Scraper.Data;
 
 namespace Scraper.Services
 {
     public class ScrapeService : IScrapeService
     {
-        public Task<StockItem[]> ScrapePortfolioAsync()
+        private readonly ApplicationDbContext _context;
+
+        public ScrapeService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<StockItem[]> ScrapePortfolioAsync()
         {
             Debug.WriteLine("UNLEASH THE SCRAPER!");
             ChromeOptions options = new ChromeOptions();
             //System.Environment.SetEnvironmentVariable("webdriver.chrome.driver", @"C:\chromedriver.exe");
-            //options.AddArguments("headless");
-            //options.AddArguments("window-size=1200x600");
+            options.AddArguments("headless");
+            options.AddArguments("window-size=1200x600");
 
             using (var driver = new ChromeDriver(@"C:\", options))
             {
@@ -63,20 +72,28 @@ namespace Scraper.Services
                     Debug.WriteLine(rawStocks);
                     StockItem[] stockItems = ProcessStocks(rawStocks);
 
-                    return Task.FromResult(stockItems);
+                    foreach(StockItem stock in stockItems)
+                    {
+                        _context.Stocks.Add(stock);
+
+                        var saveResult = await _context.SaveChangesAsync();          
+                    }
+
+                    //return Task.FromResult(stockItems);
+                    return stockItems;
 
                 }
                 catch (NoSuchElementException)
                 {
                     InfoDump(driver);
                     //Debug.WriteLine("No element found...");
-                    return Task.FromException<StockItem[]>(new NoSuchElementException("No element found"));
+                    return null;// Task.FromException<StockItem[]>(new NoSuchElementException("No element found"));
                 }
                 catch (StaleElementReferenceException)
                 {
                     Debug.WriteLine("Stale element");
                     AddPassword(driver, password);
-                    return Task.FromException<StockItem[]>(new StaleElementReferenceException("No element found"));
+                    return null;// Task.FromException<StockItem[]>(new StaleElementReferenceException("No element found"));
                 }
             }
         }
