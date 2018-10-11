@@ -178,6 +178,8 @@ namespace Scraper.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<Guid>("SnapshotId");
+
                     b.Property<double>("change");
 
                     b.Property<double>("lastPrice");
