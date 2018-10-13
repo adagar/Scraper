@@ -12,9 +12,11 @@
 
     @foreach (var snapshot in Model.Snapshots)
     {
-        <div class="snapshot-icon">
-            <p>@snapshot.SnapshotTime</p>
-        </div>
+        <a asp-area="" asp-controller="StockDisplay" asp-action="Index" asp-route-snapshotId=@snapshot.Id>
+            <div class="snapshot-icon">
+                <p>@snapshot.SnapshotTime</p>
+            </div>
+        </a>
     }
 </div>
 

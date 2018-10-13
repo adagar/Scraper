@@ -10,6 +10,6 @@ namespace Scraper.Services
 {
     public interface IStockItemService
     {
-        Task<StockItem[]> GetPortfolioAsync();
+        Task<StockItem[]> GetSnapshotStocksAsync(Guid snapshotId);
     }
 }

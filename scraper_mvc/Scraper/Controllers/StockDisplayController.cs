@@ -16,9 +16,9 @@ namespace Scraper.Controllers
         {
             _stockItemService = stockItemService;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(Guid snapshotId)
         {
-            var stocks = await _stockItemService.GetPortfolioAsync();
+            var stocks = await _stockItemService.GetSnapshotStocksAsync(snapshotId);
 
             var model = new StockViewModel()
             {
