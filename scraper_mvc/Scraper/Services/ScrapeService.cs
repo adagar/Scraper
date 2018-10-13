@@ -158,12 +158,14 @@ namespace Scraper.Services
             foreach (var rawStock in rawStocks)
             {
                 string[] rawStockInfo = rawStock.Replace(",", "").Replace("+", "").Split(' ');
+                /*
                 Debug.WriteLine(
                     "Symbol:" + rawStockInfo[0] +
                     " lastPrice:" + rawStockInfo[1] +
                     " change:" + rawStockInfo[2] +
                     " percentChange:" + rawStockInfo[3] +
                     " volume:" + rawStockInfo[8]);
+                */
                 StockItem tempStock = new StockItem
                 {
                     Id = Guid.NewGuid(),

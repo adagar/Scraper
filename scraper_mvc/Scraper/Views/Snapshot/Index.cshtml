@@ -1,0 +1,20 @@
+﻿@model SnapshotViewModel
+
+@{
+    ViewData["Title"] = "Previous Snapshots";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+
+<h2>Index</h2>
+
+<div class="panel panel-default snapshot-panel">
+    <div class="panel-heading">@ViewData["Title"]</div>
+
+    @foreach (var snapshot in Model.Snapshots)
+    {
+        <div class="snapshot-icon">
+            <p>@snapshot.SnapshotTime</p>
+        </div>
+    }
+</div>
+
