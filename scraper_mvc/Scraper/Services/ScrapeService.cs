@@ -152,25 +152,30 @@ namespace Scraper.Services
             Debug.WriteLine(rawStocks);
             StockItem[] processedStocks = new StockItem[rawStocks.Count];
             var stockCounter = 0;
+            var thisSnapshotId = Guid.NewGuid();
+            var thisTime = DateTime.UtcNow;
             //for(var i = 0; i < rawStocks.Count; i++)
             foreach (var rawStock in rawStocks)
             {
                 string[] rawStockInfo = rawStock.Replace(",", "").Replace("+", "").Split(' ');
+                /*
                 Debug.WriteLine(
                     "Symbol:" + rawStockInfo[0] +
                     " lastPrice:" + rawStockInfo[1] +
                     " change:" + rawStockInfo[2] +
                     " percentChange:" + rawStockInfo[3] +
                     " volume:" + rawStockInfo[8]);
+                */
                 StockItem tempStock = new StockItem
                 {
                     Id = Guid.NewGuid(),
+                    SnapshotId = thisSnapshotId,
                     symbol = rawStockInfo[0],
                     lastPrice = Convert.ToDouble(rawStockInfo[1]),
                     change = Convert.ToDouble(rawStockInfo[2]),
                     percentChange = Convert.ToDouble(rawStockInfo[3].Replace(oldValue: "%", newValue: "")),
                     volume = Convert.ToDouble(rawStockInfo[8].Replace(".", "").Replace("k", "000").Replace("M", "000000").Replace("B", "000000000")),
-                    snapshotTime = DateTime.Now
+                    snapshotTime = thisTime
                 };
                 processedStocks[stockCounter] = tempStock;
                 stockCounter++;

@@ -10,6 +10,7 @@ namespace Scraper.Models
     {
         
         public Guid Id { get; set; }
+        public Guid SnapshotId { get; set; }
         public string symbol { get; set; }
         public double lastPrice { get; set; }
         public double change { get; set; }

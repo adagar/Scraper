@@ -6,7 +6,7 @@ using Scraper.Models;
 
 namespace Scraper.Services
 {
-    public class FakePortfolioSnapshotService : IStockItemService
+    public class FakePortfolioSnapshotService
     {
         public Task<StockItem[]> GetPortfolioAsync()
         {

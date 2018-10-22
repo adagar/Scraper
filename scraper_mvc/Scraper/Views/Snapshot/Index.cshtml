@@ -1,0 +1,22 @@
+﻿@model SnapshotViewModel
+
+@{
+    ViewData["Title"] = "Previous Snapshots";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+
+<h2>Index</h2>
+
+<div class="panel panel-default snapshot-panel">
+    <div class="panel-heading">@ViewData["Title"]</div>
+
+    @foreach (var snapshot in Model.Snapshots)
+    {
+        <a asp-area="" asp-controller="StockDisplay" asp-action="Index" asp-route-snapshotId=@snapshot.Id>
+            <div class="snapshot-icon">
+                <p>@snapshot.SnapshotTime</p>
+            </div>
+        </a>
+    }
+</div>
+

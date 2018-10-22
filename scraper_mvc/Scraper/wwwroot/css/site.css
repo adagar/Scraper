@@ -41,3 +41,13 @@ div.stock-panel {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
+div .snapshot-icon {
+    width: 100px;
+    height: 75px;
+    background-color: blue;
+    color: white;
+    display: inline-block;
+    margin-left: 10px;
+    text-align: center;
+}
