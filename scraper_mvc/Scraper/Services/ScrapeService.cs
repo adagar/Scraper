@@ -28,8 +28,8 @@ namespace Scraper.Services
             Debug.WriteLine("UNLEASH THE SCRAPER!");
             ChromeOptions options = new ChromeOptions();
             //System.Environment.SetEnvironmentVariable("webdriver.chrome.driver", @"C:\chromedriver.exe");
-            options.AddArguments("headless");
-            options.AddArguments("window-size=1200x600");
+            //options.AddArguments("headless");
+            //options.AddArguments("window-size=1200x600");
 
             using (var driver = new ChromeDriver(@"C:\", options))
             {
